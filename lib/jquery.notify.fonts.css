@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'notify';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/notify.eot');
+  src: url('fonts/notify.eot?#iefix') format('embedded-opentype');
+  src: url('fonts/notify.svg#notify') format('svg');
+  src: url('fonts/notify.ttf') format('truetype');
+  src: url('fonts/notify.woff') format('woff');
+}
+
+[class^="notify-"], [class*=" notify-"] {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'notify';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.notify-bug:before {
+  content: "\e600";
+}
+
+.notify-notification:before {
+  content: "\e601";
+}
+
+.notify-info:before {
+  content: "\e602";
+}
+
+.notify-checkmark-circle:before {
+  content: "\e604";
+}

@@ -1,0 +1,25 @@
+<html>
+<head>
+  <link rel="stylesheet" href="stylesheets/labs.css">
+  <link rel="stylesheet" href="../lib/jquery.notify.fonts.css">
+  <link rel="stylesheet" href="../lib/jquery.notify.css">
+
+  <script src="../vendor/jquery.js"></script>
+  <script src="../lib/jquery.notify.js"></script>
+</head>
+<body style="background-color: #eee">
+  <a href="javascript:void(0);">Notify!</a>
+
+  <script>
+    function add() {
+      $.notify(Math.random());
+    };
+
+    $(function() {
+      add();
+
+      $('a').on('click', add);
+    });
+  </script>
+</body>
+</html>

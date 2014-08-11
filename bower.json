@@ -1,0 +1,16 @@
+{
+  "authors"      : ["Washington Botelho <wbotelhos@gmail.com> (http://wbotelhos.com)"],
+  "description"  : "jQuery Notify - A Notifier Plugin",
+
+  "dependencies" : {
+    "jquery": "2"
+  },
+
+  "homepage"     : "https://github.com/wbotelhos/notify",
+  "ignore"       : ["**/.*", "node_modules", "spec", "vendor"],
+  "keywords"     : ["alert", "aviso", "notice", "notificar", "notificação", "notifier", "notify"],
+  "license"      : "MIT",
+  "main"         : "lib/jquery.notify.js",
+  "name"         : "notify",
+  "version"      : "0.1.0"
+}

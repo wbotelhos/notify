@@ -1,0 +1,52 @@
+{
+  "author": "Washington Botelho",
+
+  "bugs": {
+    "url": "https://github.com/wbotelhos/notify/issues"
+  },
+
+  "contributors" : ["Washington Botelho <wbotelhos@gmail.com> (http://wbotelhos.com)"],
+  "demos"        : ["demo.html"],
+
+  "dependencies" : {
+    "jquery": "2"
+  },
+
+  "description": "jQuery Notify - A Notifier Plugin",
+
+  "devDependencies": {
+    "karma": "0.12",
+    "karma-chrome-launcher": "",
+    "karma-firefox-launcher": "",
+    "karma-ie-launcher": "",
+    "karma-jasmine": "0.2",
+    "karma-jshint-preprocessor": "",
+    "karma-opera-launcher": "",
+    "karma-phantomjs-launcher": "",
+    "karma-safari-launcher": ""
+  },
+
+  "directories": {
+    "lib"  : "lib",
+    "test" : "spec"
+  },
+
+  "engines"     : { "node" : "0.10" },
+  "homepage"    : "https://github.com/wbotelhos/notify",
+  "keywords"    : ["alert", "aviso", "notice", "notificar", "notificação", "notifier", "notify"],
+  "license"     : "MIT",
+  "main"        : "lib/jquery.notify.js",
+  "maintainers" : ["Washington Botelho <wbotelhos@gmail.com> (http://wbotelhos.com)"],
+  "name"        : "notify",
+
+  "repository": {
+    "type" : "git",
+    "url"  : "https://github.com/wbotelhos/notify"
+  },
+
+  "scripts": {
+    "test": "node_modules/karma/bin/karma start spec/karma.conf.js"
+  },
+
+  "version": "0.1.0"
+}

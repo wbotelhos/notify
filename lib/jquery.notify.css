@@ -1,0 +1,97 @@
+#notify {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  width: 300px;
+  z-index: 9999;
+}
+
+#notify.top-left {
+  left: 20px;
+  right: auto;
+}
+
+#notify.bottom-right {
+  bottom: 20px;
+  left: auto;
+  right: 20px;
+  top: auto;
+}
+
+#notify.bottom-left {
+  bottom: 20px;
+  left: 20px;
+  right: auto;
+  top: auto;
+}
+
+#notify > div {
+  -khtml-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 3px;
+  cursor: pointer;
+  display: none;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-bottom: 7px;
+  min-height: 57px;
+  padding: 7px 5px 7px 16px;
+  position: relative;
+  text-shadow: 1px 1px 0 #000;
+}
+
+#notify > div:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#notify > div.notify-icon {
+  padding-left: 54px;
+  padding-right: 12px;
+}
+
+#notify > div.notify-image {
+  padding-left: 69px;
+}
+
+#notify i {
+  border-radius: 14px;
+  border: 1px solid #fefefe;
+  color: #fefefe;
+  left: 12px;
+  padding: 5px;
+  position: absolute;
+  top: 8px;
+}
+
+#notify img {
+  -khtml-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  height: 48px;
+  left: 12px;
+  position: absolute;
+  top: 12px;
+  width: 48px;
+}
+
+#notify p {
+  color: #ddd;
+  margin: 0;
+  font-size: 0.8em;
+  padding: 0;
+  word-wrap:break-word;
+}
+
+#notify strong {
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  padding: 0 0 7px 0;
+  text-shadow: 1px 1px 0 #000;
+}
