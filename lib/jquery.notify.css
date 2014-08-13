@@ -36,8 +36,8 @@
   cursor: pointer;
   display: none;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 57px;
   margin-bottom: 7px;
-  min-height: 57px;
   padding: 7px 5px 7px 16px;
   position: relative;
   text-shadow: 1px 1px 0 #000;
