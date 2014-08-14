@@ -38,7 +38,7 @@
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   height: 57px;
   margin-bottom: 7px;
-  padding: 7px 5px 7px 16px;
+  padding: 9px;
   position: relative;
   text-shadow: 1px 1px 0 #000;
 }
@@ -82,16 +82,14 @@
 
 #notify p {
   color: #ddd;
-  margin: 0;
-  font-size: 0.8em;
-  padding: 0;
-  word-wrap:break-word;
+  margin-top: 8px;
+  word-wrap: break-word;
 }
 
 #notify strong {
-  color: #fff;
+  color: #fefefe;
   display: block;
+  font-size: 1.2em;
   font-weight: bold;
-  padding: 0 0 7px 0;
   text-shadow: 1px 1px 0 #000;
 }

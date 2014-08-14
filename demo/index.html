@@ -24,8 +24,34 @@
 
 <link rel="stylesheet" href="../lib/jquery.notify.css">
 <link rel="stylesheet" href="../lib/jquery.notify.fonts.css">
-<style>#target {
-  border: 1px solid #000;
+<style>#notify {
+  line-height: 1.3em;
+}
+
+#notify .notify-item p {
+  font-size: 1.4em;
+  margin-top: 10px;
+  text-shadow: none;
+  text-align: center;
+}
+
+#notify > div.body-image {
+  height: 73px
+}
+
+#notify > div.body-image p {
+  font-size: 1.3em;
+  margin-top: 17px;
+}
+
+#notify > div.body-icon {
+  height: 42px;
+  padding-left: 47px;
+}
+
+#notify > div.body-icon p {
+  font-size: 1.2em;
+  margin-top: 4px;
 }</style>
 
 <script src="../vendor/jquery.js"></script><script src="../lib/jquery.notify.js"></script>
@@ -64,21 +90,21 @@
     <h1>
 <a name="default"></a> Default</h1>
 
-<p>Without configurations, the string passed to Notify is considered the body of message.</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">(</span><span class="s1">'I am the Notify!'</span><span class="p">);</span>
+<p>The string passed is the body of message.</p>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">(</span><span class="s1">'I am the Body'</span><span class="p">);</span>
 </pre></div>
 <p><a id="default-demo" href="javascript:void(0);">Open</a></p>
 
 <h1>
 <a name="title"></a> Title</h1>
 
-<p>You can give a title for your notice passing one more hash parameters:</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">(</span><span class="s1">'I am the Notify!'</span><span class="p">,</span> <span class="p">{</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">'And what the notice say?'</span> <span class="p">});</span>
+<p>You can give a title for your notice passing a hash with parameters:</p>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">(</span><span class="s1">'I am the Body'</span><span class="p">,</span> <span class="p">{</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">'I am the Title!'</span> <span class="p">});</span>
 </pre></div>
 <p><a id="title-demo" href="javascript:void(0);">Open</a></p>
 
-<p>But when you want parameter, is more convinient to use all as it:</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">'And what the notice say?'</span> <span class="p">});</span>
+<p>But when you want extra parameters, is more convinient to use all as it:</p>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="s1">'I am the Title!'</span> <span class="p">});</span>
 </pre></div>
 <p><a id="title2-demo" href="javascript:void(0);">Open</a></p>
 
@@ -87,7 +113,7 @@
 
 <p>You can use some image into notice just passing an URL. It will appears on the left side.</p>
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span>
-  <span class="nx">body</span>  <span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span>
+  <span class="nx">body</span>  <span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span>
   <span class="nx">image</span> <span class="o">:</span> <span class="s1">'https://pbs.twimg.com/profile_images/1591360162/wbotelhos-qconsp.png'</span>
 <span class="p">});</span>
 </pre></div>
@@ -96,10 +122,10 @@
 <h1>
 <a name="icon"></a> Icon</h1>
 
-<p>Instead <a href="#image">image</a> you can to use a font icon on an <code>&lt;i/&gt;</code> element.<br>
-The font name depends the name of the fonts you have.<br>
-We provide the CSS <code>jquery.notify.fonts.css</code> that you need to import, but you can to use your own.</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span> <span class="nx">icon</span><span class="o">:</span> <span class="s1">'notify-info'</span> <span class="p">});</span>
+<p>Instead <a href="#image">image</a> you can use a font icon on an <code>&lt;i/&gt;</code> element.<br>
+The font name depends of your font<code>s name.<br>
+We provide</code>jquery.notify.fonts.css` as an example, but you can use your own.</p>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span> <span class="nx">icon</span><span class="o">:</span> <span class="s1">'notify-bug'</span> <span class="p">});</span>
 </pre></div>
 <p><a id="icon-demo" href="javascript:void(0);">Open</a></p>
 
@@ -109,7 +135,7 @@ We provide the CSS <code>jquery.notify.fonts.css</code> that you need to import,
 <p>Main element hooked via <strong>ID</strong> where all noticies will be <strong>appended</strong>.<br>
 If element already exists on DOM, it will be just loaded and used.<br>
 If element does not exists, then it will be created and <strong>appended</strong> into <code>body</code>.</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span> <span class="nx">wrapper</span><span class="o">:</span> <span class="s1">'#target'</span> <span class="p">});</span>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span> <span class="nx">wrapper</span><span class="o">:</span> <span class="s1">'#notify'</span> <span class="p">});</span>
 </pre></div>
 <p><a id="wrapper-demo" href="javascript:void(0);">Open</a></p>
 
@@ -117,7 +143,7 @@ If element does not exists, then it will be created and <strong>appended</strong
 <a name="destroy"></a>Destroy</h1>
 
 <p>Removes the <a href="#wrapper">wrapper</a> when there is no more notice on it.</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span> <span class="nx">destroy</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span> <span class="nx">destroy</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
 </pre></div>
 <p><a id="destroy-demo" href="javascript:void(0);">Open</a></p>
 
@@ -133,7 +159,7 @@ This positions is configured via CSS on <code>jquery.notify.css</code> and affec
 <li>bottom-left</li>
 <li>bottom right</li>
 </ul>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span> <span class="nx">position</span><span class="o">:</span> <span class="s1">'top-left'</span> <span class="p">});</span>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span> <span class="nx">position</span><span class="o">:</span> <span class="s1">'top-left'</span> <span class="p">});</span>
 </pre></div>
 <p><a id="position-demo" href="javascript:void(0);">Open</a></p>
 
@@ -141,7 +167,7 @@ This positions is configured via CSS on <code>jquery.notify.css</code> and affec
 <a name="showTime"></a> Show Time</h1>
 
 <p>Time used on fade in effect until notice appears.</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span> <span class="nx">showTime</span><span class="o">:</span> <span class="mi">400</span> <span class="p">});</span>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span> <span class="nx">showTime</span><span class="o">:</span> <span class="mi">100</span> <span class="p">});</span>
 </pre></div>
 <p><a id="showTime-demo" href="javascript:void(0);">Open</a></p>
 
@@ -150,7 +176,7 @@ This positions is configured via CSS on <code>jquery.notify.css</code> and affec
 
 <p>How many time in <strong>milliseconds</strong> until the notice <strong>begins</strong> to disappear.<br>
 The whole time until notice completely disappears depends on the sum of this and <a href="#hideTime">hideTime</a> plus <a href="#minimizeTime">minimizeTime</a></p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span> <span class="nx">timeout</span><span class="o">:</span> <span class="mi">1000</span> <span class="p">});</span>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span> <span class="nx">timeout</span><span class="o">:</span> <span class="mi">100</span> <span class="p">});</span>
 </pre></div>
 <p><a id="timeout-demo" href="javascript:void(0);">Open</a></p>
 
@@ -159,7 +185,7 @@ The whole time until notice completely disappears depends on the sum of this and
 
 <p>After <a href="#timeout">timeout</a> finish, this effects starts to fade out the notice.<br>
 This will keeps occupying the space. So, the next one is the <a href="#minimizeTime">minimizeTime</a>.</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span> <span class="nx">hideTime</span><span class="o">:</span> <span class="mi">1000</span> <span class="p">});</span>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span> <span class="nx">hideTime</span><span class="o">:</span> <span class="mi">100</span> <span class="p">});</span>
 </pre></div>
 <p><a id="hideTime-demo" href="javascript:void(0);">Open</a></p>
 
@@ -172,16 +198,16 @@ It will minimize the current notice and remove it when it gets height equal 0.</
 <blockquote>
 <p>Try to keep it less than <a href="#hideTime">hideTime</a> for miminize only when notice is not more visible.</p>
 </blockquote>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span> <span class="nx">minimizeTime</span><span class="o">:</span> <span class="mi">300</span> <span class="p">});</span>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span> <span class="nx">minimizeTime</span><span class="o">:</span> <span class="mi">100</span> <span class="p">});</span>
 </pre></div>
-<p><a id="minimizeTime" href="javascript:void(0);">Open</a></p>
+<p><a id="minimizeTime-demo" href="javascript:void(0);">Open</a></p>
 
 <h1>
 <a name="forever"></a>forever</h1>
 
 <p>Disables the <a href="#timeout">timeout</a> and let the notice on screen forever.<br>
 Don't worry! We still have the <a href="#closeClick">closeClick</a> option.</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span> <span class="nx">forever</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span> <span class="nx">forever</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
 </pre></div>
 <p><a id="forever-demo" href="javascript:void(0);">Open</a></p>
 
@@ -189,7 +215,7 @@ Don't worry! We still have the <a href="#closeClick">closeClick</a> option.</p>
 <a name="closeClick"></a>Close Click</h1>
 
 <p>Close the notice when click on it.</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span> <span class="nx">closeClick</span><span class="o">:</span> <span class="kc">false</span> <span class="p">});</span>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span> <span class="nx">closeClick</span><span class="o">:</span> <span class="kc">false</span> <span class="p">});</span>
 </pre></div>
 <p><a id="closeClick-demo" href="javascript:void(0);">Open</a></p>
 
@@ -197,7 +223,7 @@ Don't worry! We still have the <a href="#closeClick">closeClick</a> option.</p>
 <a name="id"></a>Id</h1>
 
 <p>Identifier used as class name for each notice.</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span> <span class="nx">id</span><span class="o">:</span> <span class="s1">'notify-item'</span> <span class="p">});</span>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span> <span class="nx">id</span><span class="o">:</span> <span class="s1">'notify-item'</span> <span class="p">});</span>
 </pre></div>
 <p><a id="id-demo" href="javascript:void(0);">Open</a></p>
 
@@ -206,7 +232,7 @@ Don't worry! We still have the <a href="#closeClick">closeClick</a> option.</p>
 
 <p>Number maximum of noticies on screen.<br>
 If this limit is exceeded, the items are placed in a queue and shown later.</p>
-<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span> <span class="nx">max</span><span class="o">:</span> <span class="mi">1</span> <span class="p">});</span>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span> <span class="nx">body</span><span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span> <span class="nx">max</span><span class="o">:</span> <span class="mi">1</span> <span class="p">});</span>
 </pre></div>
 <p><a id="max-demo" href="javascript:void(0);">Open</a></p>
 
@@ -217,19 +243,21 @@ If this limit is exceeded, the items are placed in a queue and shown later.</p>
 Return <code>false</code> will prevent the open action.<br>
 Inside the callback <code>this</code> is the Notify instance.</p>
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span>
-  <span class="nx">body</span>       <span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span>
+  <span class="nx">body</span>       <span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span>
   <span class="nx">beforeOpen</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">alert</span><span class="p">(</span><span class="s1">'A notice will be presented.'</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
+<p><a id="beforeOpen-demo" href="javascript:void(0);">Open</a></p>
+
 <h1>
 <a name="afterOpen"></a>After Open</h1>
 
 <p>Callback execute after the notice appears on screen.<br>
 Inside the callback <code>this</code> is the Notify instance.</p>
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span>
-  <span class="nx">body</span>      <span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span>
+  <span class="nx">body</span>      <span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span>
   <span class="nx">afterOpen</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">alert</span><span class="p">(</span><span class="s1">'The notice is on the screen.'</span><span class="p">);</span>
   <span class="p">}</span>
@@ -244,7 +272,7 @@ Inside the callback <code>this</code> is the Notify instance.</p>
 Return <code>false</code> will prevent the open action.<br>
 Inside the callback <code>this</code> is the Notify instance.</p>
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span>
-  <span class="nx">body</span>        <span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span>
+  <span class="nx">body</span>        <span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span>
   <span class="nx">beforeClose</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">alert</span><span class="p">(</span><span class="s2">"I'll be back!"</span><span class="p">);</span>
   <span class="p">}</span>
@@ -258,7 +286,7 @@ Inside the callback <code>this</code> is the Notify instance.</p>
 <p>Callback execute after the notice is closed.<br>
 Inside the callback <code>this</code> is the Notify instance.</p>
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span>
-  <span class="nx">body</span>       <span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span>
+  <span class="nx">body</span>       <span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span>
   <span class="nx">afterClose</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">alert</span><span class="p">(</span><span class="s2">"It's gone!"</span><span class="p">);</span>
   <span class="p">}</span>
@@ -273,7 +301,7 @@ Inside the callback <code>this</code> is the Notify instance.</p>
 Return <code>false</code> will prevent the notice of to be closed, in case <a href="#closeClick">closeClick</a> is enabled.<br>
 Inside the callback <code>this</code> is the Notify instance.</p>
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span>
-  <span class="nx">body</span>  <span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span>
+  <span class="nx">body</span>  <span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span>
   <span class="nx">click</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">alert</span><span class="p">(</span><span class="s1">'Do not touch me!'</span><span class="p">);</span>
   <span class="p">}</span>
@@ -289,7 +317,7 @@ When the notice is mouseovered the <a href="#timeout">timeout</a> option is canc
 Return <code>false</code> will prevent this cancel and the time will be counted normally.<br>
 Inside the callback <code>this</code> is the Notify instance.</p>
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span>
-  <span class="nx">body</span>      <span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span>
+  <span class="nx">body</span>      <span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span>
   <span class="nx">mouseover</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">alert</span><span class="p">(</span><span class="s1">'I can see you!'</span><span class="p">);</span>
   <span class="p">}</span>
@@ -305,7 +333,7 @@ When the notice is mouseouted the <a href="#timeout">timeout</a> is reactivated.
 Return <code>false</code> will prevent this reactivation and the notice will be there <a href="#forever">forever</a>.<br>
 Inside the callback <code>this</code> is the Notify instance.</p>
 <div class="highlight"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span>
-  <span class="nx">body</span>     <span class="o">:</span> <span class="s1">'I am the Notify!'</span><span class="p">,</span>
+  <span class="nx">body</span>     <span class="o">:</span> <span class="s1">'I am the Body'</span><span class="p">,</span>
   <span class="nx">mouseout</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">alert</span><span class="p">(</span><span class="s1">'Where are you?'</span><span class="p">);</span>
   <span class="p">}</span>
@@ -383,7 +411,7 @@ Inside the callback <code>this</code> is the Notify instance.</p>
 <div class="highlight"><pre><span class="nx">title</span><span class="o">:</span> <span class="kc">undefined</span>
 </pre></div>
 <p>The notice title.</p>
-<div class="highlight"><pre><span class="nx">wrapper</span><span class="o">:</span> <span class="err">'#</span><span class="nx">notify</span>
+<div class="highlight"><pre><span class="nx">wrapper</span><span class="o">:</span> <span class="s1">'#notify'</span>
 </pre></div>
 <p>Where notices will be appended.</p>
 
@@ -441,135 +469,200 @@ Inside the callback <code>this</code> is the Notify instance.</p>
 
   $(function() {
     $('#default-demo').on('click', function() {
-  $.notify('I am the Notify!');
+  $.notify('I am the Body.');
 });
 
 $('#title-demo').on('click', function() {
-  $.notify('I am the Notify!', { title: 'And what the notice say?' });
+  $.notify('I am the Body.', {
+    id       : 'body-title',
+    title    : 'I am the Title!',
+    position : 'top-right'
+  });
 });
 
 $('#title2-demo').on('click', function() {
-  $.notify({ body: 'I am the Notify!', title: 'And what the notice say?' });
+  $.notify({
+    id       : 'body-title',
+    body     : 'I am the Body.',
+    title    : 'I am the Title!',
+    position : 'top-right'
+  });
 });
 
 $('#image-demo').on('click', function() {
   $.notify({
-    body  : 'I am the Notify!',
-    image : 'https://pbs.twimg.com/profile_images/1591360162/wbotelhos-qconsp.png'
+    id       : 'body-image',
+    body     : 'I am the Body.',
+    image    : 'https://pbs.twimg.com/profile_images/1591360162/wbotelhos-qconsp.png',
+    position : 'top-right'
   });
 });
 
 $('#icon-demo').on('click', function() {
-  $.notify({ body: 'I am the Notify!', icon: 'notify-info' });
+  $.notify({
+    id       : 'body-icon',
+    body     : 'I am the Body.',
+    icon     : 'notify-bug',
+    position : 'top-right'
+  });
 });
 
 $('#wrapper-demo').on('click', function() {
-  $.notify({ body: 'I am the Notify!', wrapper: '#target' });  
+  $.notify({
+    body     : 'I am the Body.',
+    position : 'top-right',
+    wrapper  : '#notify'
+  });
 });
 
 $('#destroy-demo').on('click', function() {
-  $.notify({ body: 'I am the Notify!', destroy: true, wrapper: '#target' });
+  $.notify({
+    body     : 'I am the Body.',
+    destroy  : true,
+    position : 'top-right'
+  });
 });
 
 $('#position-demo').on('click', function() {
-  $.notify({ body: 'I am the Notify!', position: 'top-left' });
+  $.notify({
+    body     : 'I am the Body.',
+    position : 'top-left'
+  });
 });
 
 $('#showTime-demo').on('click', function() {
-  $.notify({ body: 'I am the Notify!', minimizeTime: 300 });
+  $.notify({
+    body     : 'I am the Body.',
+    showTime : 100,
+    position : 'top-right'
+  });
 });
 
 $('#timeout-demo').on('click', function() {
-  $.notify({ body: 'I am the Notify!', timeout: 1000 });
+  $.notify({
+    body     : 'I am the Body.',
+    position : 'top-right',
+    timeout  : 100
+  });
 });
 
 $('#hideTime-demo').on('click', function() {
-  $.notify({ body: 'I am the Notify!', hideTime: 1000 });
+  $.notify({
+    body     : 'I am the Body.',
+    hideTime : 100,
+    position : 'top-right'
+  });
 });
 
 $('#minimizeTime-demo').on('click', function() {
-  $.notify({ body: 'I am the Notify!', minimizeTime: 300 });
+  $.notify({
+    body         : 'I am the Body.',
+    minimizeTime : 100,
+    position     : 'top-right'
+  });
 });
 
-$('#showTime-demo').on('click', function() {
-  $.notify({ body: 'I am the Notify!', forever: true });
+$('#forever-demo').on('click', function() {
+  $.notify({
+    body     : 'I am the Body.',
+    forever  : true,
+    position : 'top-right'
+  });
 });
 
 $('#closeClick-demo').on('click', function() {
-  $.notify({ body: 'I am the Notify!', closeClick: false });
+  $.notify({
+    body       : 'I am the Body.',
+    closeClick : false,
+    position   : 'top-right'
+  });
 });
 
 $('#id-demo').on('click', function() {
-  $.notify({ body: 'I am the Notify!', id: 'notify-item' });
+  $.notify({
+    body     : 'I am the Body.',
+    id       : 'notify-item',
+    position : 'top-right'
+  });
 });
 
 $('#max-demo').on('click', function() {
-  $.notify({ body: 'I am the Notify!', max: 1 });
+  $.notify({
+    body     : 'I am the Body.',
+    max      : 1,
+    position : 'top-right'
+  });
 });
 
 $('#beforeOpen-demo').on('click', function() {
   $.notify({
-    body       : 'I am the Notify!',
+    body       : 'I am the Body.',
     beforeOpen : function() {
       alert('A notice will be presented.');
-    }
+    },
+    position   : 'top-right'
   });
 });
 
 $('#afterOpen-demo').on('click', function() {
   $.notify({
-    body      : 'I am the Notify!',
+    body      : 'I am the Body.',
     afterOpen : function() {
       alert('The notice is on the screen.');
-    }
+    },
+    position  : 'top-right'
   });
 });
 
 $('#beforeClose-demo').on('click', function() {
   $.notify({
-    body        : 'I am the Notify!',
+    body        : 'I am the Body.',
     beforeClose : function() {
       alert("I'll be back!");
-    }
+    },
+    position    : 'top-right'
   });
 });
 
 $('#afterClose-demo').on('click', function() {
   $.notify({
-    body       : 'I am the Notify!',
+    body       : 'I am the Body.',
     afterClose : function() {
       alert("It's gone!");
-    }
+    },
+    position   : 'top-right'
   });
 });
 
 $('#click-demo').on('click', function() {
   $.notify({
-    body  : 'I am the Notify!',
-    click : function(evt) {
+    body     : 'I am the Body.',
+    click    : function(evt) {
       alert('Do not touch me!');
-    }
+    },
+    position : 'top-right'
   });
 });
 
 $('#mouseover-demo').on('mouseover', function() {
   $.notify({
-    body  : 'I am the Notify!',
+    body      : 'I am the Body.',
     mouseover : function(evt) {
       alert('I can see you!');
-    }
+    },
+    position  : 'top-right'
   });
 });
 
 $('#mouseout-demo').on('mouseout', function() {
   $.notify({
-    body     : 'I am the Notify!',
+    body     : 'I am the Body.',
     mouseout : function(evt) {
       alert('Where are you?');
-    }
+    },
+    position  : 'top-right'
   });
 });
-
 
   });
 </script>
