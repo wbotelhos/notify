@@ -27,7 +27,7 @@ describe('#forever', function() {
       setTimeout(function() {
         expect(instance.wrapper.children().length).toEqual(0);
         done();
-      }, 10);
+      }, 500);
     });
   });
 
@@ -49,7 +49,7 @@ describe('#forever', function() {
       setTimeout(function() {
         expect(instance.wrapper.children().length).toEqual(1);
         done();
-      }, 10);
+      }, 500);
     });
   });
 });
