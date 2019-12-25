@@ -49,7 +49,7 @@
     "url": "https://github.com/wbotelhos/notify"
   },
   "scripts": {
-    "test": "node_modules/karma/bin/karma start spec/karma.conf.js"
+    "test": "node_modules/karma/bin/karma start karma.conf.js"
   },
   "version": "0.1.0"
 }
