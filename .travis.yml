@@ -1,0 +1,11 @@
+install:
+  - npm i
+
+language: node_js
+node_js: stable
+
+script:
+  - npm t
+
+services:
+ - xvfb
