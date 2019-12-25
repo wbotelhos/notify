@@ -1,52 +1,55 @@
 {
   "author": "Washington Botelho",
-
   "bugs": {
     "url": "https://github.com/wbotelhos/notify/issues"
   },
-
-  "contributors" : ["Washington Botelho <wbotelhos@gmail.com> (http://wbotelhos.com)"],
-  "demos"        : ["demo.html"],
-
-  "dependencies" : {
-    "jquery": "2"
+  "contributors": [
+    "Washington Botelho <wbotelhos@gmail.com> (https://www.danca.com)"
+  ],
+  "demos": [
+    "demo.html"
+  ],
+  "dependencies": {
+    "jquery": "3"
   },
-
   "description": "jQuery Notify - A Notifier Plugin",
-
   "devDependencies": {
-    "karma": "0.12",
-    "karma-chrome-launcher": "",
-    "karma-firefox-launcher": "",
-    "karma-ie-launcher": "",
-    "karma-jasmine": "0.2",
-    "karma-jshint-preprocessor": "",
-    "karma-opera-launcher": "",
-    "karma-phantomjs-launcher": "",
-    "karma-safari-launcher": ""
+    "jasmine-core": "^2.99.1",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.2.0",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^1.1.2",
+    "karma-opera-launcher": "^1.0.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-safari-launcher": "^1.0.0"
   },
-
   "directories": {
-    "lib"  : "lib",
-    "test" : "spec"
+    "lib": "lib",
+    "test": "spec"
   },
-
-  "engines"     : { "node" : "0.10" },
-  "homepage"    : "https://github.com/wbotelhos/notify",
-  "keywords"    : ["alert", "aviso", "notice", "notificar", "notificação", "notifier", "notify"],
-  "license"     : "MIT",
-  "main"        : "lib/jquery.notify.js",
-  "maintainers" : ["Washington Botelho <wbotelhos@gmail.com> (http://wbotelhos.com)"],
-  "name"        : "notify",
-
+  "homepage": "https://github.com/wbotelhos/notify",
+  "keywords": [
+    "alert",
+    "aviso",
+    "notice",
+    "notificar",
+    "notificação",
+    "notifier",
+    "notify"
+  ],
+  "license": "MIT",
+  "main": "lib/jquery.notify.js",
+  "maintainers": [
+    "Washington Botelho <wbotelhos@gmail.com> (http://wbotelhos.com)"
+  ],
+  "name": "notify",
   "repository": {
-    "type" : "git",
-    "url"  : "https://github.com/wbotelhos/notify"
+    "type": "git",
+    "url": "https://github.com/wbotelhos/notify"
   },
-
   "scripts": {
     "test": "node_modules/karma/bin/karma start spec/karma.conf.js"
   },
-
   "version": "0.1.0"
 }
