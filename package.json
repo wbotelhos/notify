@@ -10,7 +10,7 @@
     "demo.html"
   ],
   "dependencies": {
-    "jquery": "3"
+    "jquery": "^3.4.1"
   },
   "description": "jQuery Notify - A Notifier Plugin",
   "devDependencies": {
